@@ -9,5 +9,7 @@
     <%= question.formated_created_at %>
 </time>
 <%= question.body%>
+<br/>
+<%= link_to 'Edit', edit_question_path(question.id) %>
 </p>
 <% end %>

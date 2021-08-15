@@ -8,6 +8,7 @@
 </time>
 <%= question.body%>
 <br/>
+<%= link_to 'Show', question_path(question.id) %>
 <%= link_to 'Edit', edit_question_path(question.id) %>
 <%= link_to 'Destroy', question_path(question.id), data: {method: :delete, confirm: 'Are you sure?'} %>
 </p>

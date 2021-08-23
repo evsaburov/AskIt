@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   # post '/questions', to: 'questions#create'
 
   # resources :questions, only: %i[index new edit create update destroy show]
-  resources :questions
+  resources :questions do
+    resources :answers, only: %i[create destroy]
+  end
+  
   root 'pages#index'
 end
  

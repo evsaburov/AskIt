@@ -1,4 +1,5 @@
 module ErrorHandling
+    
     extend ActiveSupport::Concern
 
     included  do
@@ -11,4 +12,6 @@ module ErrorHandling
             render file: 'public/404.html', status: :notfound, layout: false
         end
     end
+
+    
 end

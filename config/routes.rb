@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # resources :questions, only: %i[index new edit create update destroy show]
   resources :questions do
-    resources :answers, only: %i[create destroy]
+    resources :answers, exept: %i[new show]
   end
   
   root 'pages#index'
